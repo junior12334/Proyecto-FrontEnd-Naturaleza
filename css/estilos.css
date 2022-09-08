@@ -1,0 +1,288 @@
+/*---RESET - GENERAL-----*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+main, header, aside, footer{
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4, p, li {
+   padding: 0.5em 0;
+   line-height: 1.6rem;
+}
+
+li{
+    list-style: square;
+    margin-left: 1em;
+}
+
+/*-------COLORES - FONFO-------*/
+
+.fondo-blanco{ background-color: white;}
+
+.fondo-negro{ background-color: black;}
+
+.fondo-gris{ background-color: #e3e3e3;}
+
+.fondo-azul-base{background-color: #125b7b;}
+
+.fondo-azul-01{ background-color: #80abf8;}
+
+.fondo-azul-02{ background-color: #0B4561;}
+
+.fondo-verde-base{background-color: #378e74;}
+
+.fondo-verde-01{ background-color: #94C7b8;}
+
+.fondo-verde-02{ background-color: #276D58;}
+
+/*---CENTRA LA I NFORMACION EN GENERAL ----*/
+
+.wrapper{
+    margin: auto;
+    max-width: 75rem;
+}
+
+.header .wrapper,
+.footer .wrapper {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .wrapper,
+.footer .wrapper,
+.footer .info {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*---- CONTENIDO ----*/
+
+.content{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.intro{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.intro .video,
+.intro .texto {
+    margin: 0 0.5em;
+}
+
+/*-----SIDEBAR------*/
+
+.sedebar{
+    flex: 1 0 calc(25% - 1em);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em;
+}
+
+.sidebar .link-interes{
+    margin: 1em 0;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: #276D58;
+}
+
+/*------FOOTER------*/
+
+.footer, .footer a{
+    color: #FFFFFF;
+}
+
+.footer .info{
+    flex-direction: column;
+}
+
+.footer .info p{
+    font-size: small;
+    padding: 0 0.33em;
+}
+
+.footer .info,
+.footer .redes-sociales {
+    flex: 2;
+}
+
+.footer .menu{
+    flex: 3;
+}
+
+/*------ MENU - IGUAL PARA HEADER COMO PARA FOOTER -----*/
+
+.menu ul,
+.redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    align-items: center;
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu a,
+.redes-sociales {
+    text-decoration: none;
+    margin: 0 1em;
+    color: #FFFFFF;
+}
+
+/*------ CARDS -----*/
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex: 0 1 calc(33.3% - 1em);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 0;
+    box-shadow: 0.1em 0.1em;
+    align-self: stretch;
+    gap: 1em;
+    margin: 1em 0.5em;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card p {
+    padding: 0 1em;
+}
+
+.card .card-header {
+    display: flex;
+    flex: 1;
+    padding: 0 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .card-profile img {
+    max-width: 50px;
+    border-radius: 50px;
+
+}
+
+/*----BANNER -----*/
+
+.hero {
+    background-image: url(../img/banner-img.jpg);
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*--------- MEDIA QUERIES ------*/
+
+@media screen and (min-width:640px) {
+
+    .flex-container{
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .header .wrapper,
+    .footer .wrapper,
+    .footer .info {
+        flex-direction: column;
+    }
+
+
+    .menu,
+    .redes-sociales {
+        margin: 1.5em 0 0 0;
+    }
+
+    .menu a {
+        margin: 0 0.3em;
+    }
+
+    .card {
+        flex: 0 1 100%;
+    }
+
+}
+
+@media screen and (min-width: 701px) and (max-width:119px) {
+
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+
+    .footer p{
+        font-size: 10px !important;
+    }
+
+    .footer .menu a,
+    .redes-sociales a {
+        margin: 0 0.3em;
+    }
+
+    .menu a{
+        font-size: small;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+
+    .video-deaktop {
+        display: none;
+    }
+
+}
+
+
+@media screen and (min-width: 1201px ) {
+
+    .intro .video {
+        display: none;
+    }
+
+    .intro .video-deaktop {
+        display: inline;
+        margin-left: 1em       ;
+    }
+    
+}
